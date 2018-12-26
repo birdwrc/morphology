@@ -1,0 +1,10 @@
+%%Morphology
+%%Dilation
+mor = imread ('morphoss.png');
+rec = strel('rectangle',[20,10]);
+mor_ero = imerode(mor,rec);
+subplot(1,2,1), imshow(mor_ero);
+title('Erosion');
+mor_di = imdilate(mor,rec);
+subplot(1,2,2), imshow(mor_di);
+title('Dilution');
